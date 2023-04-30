@@ -9,7 +9,9 @@ let usersRouter = require("./routes/users.route");
 let Post = require("./models/post.model").Post;
 let auth = require("./controllers/auth");
 
-mongoose.connect("mongodb://localhost/travels", { useNewUrlParser: true });
+let username = process.env.mongoUserName;
+let password = process.env.mongoUserPass;
+mongoose.connect(`mongodb+srv://{username}:${password}@cluster0.npafpfv.mongodb.net/travels`, { useNewUrlParser: true });
 
 let app = express();
 
