@@ -11,7 +11,7 @@ let auth = require("./controllers/auth");
 
 let username = process.env.mongoUserName;
 let password = process.env.mongoUserPass;
-mongoose.connect(`mongodb+srv://{username}:${password}@cluster0.npafpfv.mongodb.net/travels`, { useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.npafpfv.mongodb.net/travels`, { useNewUrlParser: true });
 
 let app = express();
 
